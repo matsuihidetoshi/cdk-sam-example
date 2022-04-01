@@ -1,16 +1,20 @@
-import { Stack, StackProps } from 'aws-cdk-lib';
-import { Construct } from 'constructs';
-// import * as sqs from 'aws-cdk-lib/aws-sqs';
+import {Stack, StackProps} from "aws-cdk-lib"
+import {Construct} from "constructs"
+import * as lambda from "aws-cdk-lib/aws-lambda-nodejs"
+import * as apigateway from "aws-cdk-lib/aws-apigateway"
 
 export class CdkSamExampleStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
-    super(scope, id, props);
+    super(scope, id, props)
 
-    // The code that defines your stack goes here
+    const backend = new lambda.NodejsFunction(this, "MyFunction", {
+      entry: "lambda/hello.ts", // accepts .js, .jsx, .ts, .tsx and .mjs files
+      handler: "handler", // defaults to 'handler'
+    })
 
-    // example resource
-    // const queue = new sqs.Queue(this, 'CdkSamExampleQueue', {
-    //   visibilityTimeout: cdk.Duration.seconds(300)
-    // });
+    // API Gatewayを追加
+    new apigateway.LambdaRestApi(this, "myApi", {
+      handler: backend,
+    })
   }
 }
