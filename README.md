@@ -16,5 +16,5 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 ## リクエスト送信 (curl)
 
 ```
-curl -H "Accept: application/json" -H "Content-type: application/json" -X GET http://127.0.0.1:3000 -d {\"hello\":\"chiba\"}
+curl -H "Accept: application/json" -H "Content-type: application/json" -X GET http://127.0.0.1:3000 -d {\"hello\":\"matsui\"}
 ```
