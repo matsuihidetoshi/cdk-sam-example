@@ -12,3 +12,9 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 * `cdk deploy`      deploy this stack to your default AWS account/region
 * `cdk diff`        compare deployed stack with current state
 * `cdk synth`       emits the synthesized CloudFormation template
+
+## リクエスト送信 (curl)
+
+```
+curl -H "Accept: application/json" -H "Content-type: application/json" -X GET http://127.0.0.1:3000 -d {\"hello\":\"chiba\"}
+```
