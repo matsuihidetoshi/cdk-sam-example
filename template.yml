@@ -23,7 +23,7 @@ Resources:
       Code:
         S3Bucket:
           Fn::Sub: cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}
-        S3Key: 741c986cbc3ae3c1c20967f559919c46b4f81f8ad464661aee984c200f06eded.zip
+        S3Key: 21c2e2800dc2b9970eb5d8e8b23528740a364aaaeb4621b1e43658e678e69871.zip
       Role:
         Fn::GetAtt:
           - MyFunctionServiceRole3C357FF2
@@ -37,7 +37,7 @@ Resources:
       - MyFunctionServiceRole3C357FF2
     Metadata:
       aws:cdk:path: CdkSamExampleStack/MyFunction/Resource
-      aws:asset:path: /Users/matsuihidetoshi/cdk-sam-example/cdk.out/asset.741c986cbc3ae3c1c20967f559919c46b4f81f8ad464661aee984c200f06eded
+      aws:asset:path: /Users/matsuihidetoshi/cdk-sam-example/cdk.out/asset.21c2e2800dc2b9970eb5d8e8b23528740a364aaaeb4621b1e43658e678e69871
       aws:asset:is-bundled: true
       aws:asset:property: Code
   myApi10332170:
